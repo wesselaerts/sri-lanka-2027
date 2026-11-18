@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b3a43">
+<title>Sri Lanka 2027</title>
+<meta name="description" content="Onze reis door Sri Lanka, van 4 tot 24 januari 2027: acht plekken in negentien nachten.">
+<meta property="og:title" content="Sri Lanka 2027">
+<meta property="og:description" content="Drie weken, acht plekken: van de rotsen van Sigiriya naar de muren van Galle.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://wesselaerts.github.io/sri-lanka-2027/fotos/deel.jpg">
+<meta property="og:url" content="https://wesselaerts.github.io/sri-lanka-2027/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b3a43'/%3E%3Ccircle cx='32' cy='30' r='13' fill='%23e9a23b'/%3E%3Cpath d='M8 46c8-5 16-5 24 0s16 5 24 0v12H8z' fill='%23eaf3f1'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="fotos/sigiriya-1920.webp" imagesrcset="fotos/sigiriya-960.webp 960w, fotos/sigiriya-1920.webp 1920w" imagesizes="100vw">
+<style>
+/* Opzet: een reis als spoorlijn met acht haltes. Rustig papier, foto's van rand tot rand,
+   en donker oceaanblauw voor de kaart, de treinreis en het slot. */
+:root{
+  --paper:#f4f6f2;
+  --paper-2:#e8ede6;
+  --ink:#10262b;
+  --ink-soft:#4b6064;
+  --line:#d2dad3;
+  --lagoon:#0b3a43;
+  --lagoon-deep:#072a31;
+  --foam:#eaf3f1;
+  --saffron:#e9a23b;
+  --saffron-ink:#96580a;
+  --leaf:#8fbf8a;
+  --serif:"Cormorant Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"DM Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --gut:max(20px,env(safe-area-inset-left,0px));
+  --gut-r:max(20px,env(safe-area-inset-right,0px));
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,figure,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:1200px;margin-inline:auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.kicker{font:500 .78rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- vaste balk ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:60;padding-top:env(safe-area-inset-top,0px);background:rgba(244,246,242,.9);-webkit-backdrop-filter:saturate(1.5) blur(14px);backdrop-filter:saturate(1.5) blur(14px);border-bottom:1px solid var(--line);transform:translateY(-105%);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.nav.on{transform:none}
+.nav-in{display:flex;align-items:center;gap:18px;height:56px}
+.brand{font:600 italic 1.4rem/1 var(--serif);text-decoration:none;white-space:nowrap;padding:8px 0}
+.rail{display:none;position:relative;flex:0 1 420px;justify-content:space-between;align-items:center;margin-left:auto}
+.rail::before{content:"";position:absolute;left:8px;right:8px;top:50%;border-top:1px dashed #b4c0b8}
+.rail a{position:relative;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--paper);border:1px solid #b4c0b8;font:500 .68rem/1 var(--mono);color:var(--ink-soft);text-decoration:none;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.rail a:hover{border-color:var(--ink);color:var(--ink)}
+.rail a.done{border-color:var(--saffron-ink);color:var(--saffron-ink)}
+.rail a.on{background:var(--ink);border-color:var(--ink);color:var(--paper);transform:scale(1.15)}
+.now{flex:1 1 auto;min-width:0;font:500 .74rem/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{font:600 .88rem/1 var(--sans);text-decoration:none;padding:12px 8px;border-radius:4px}
+.nav-links a:hover{color:var(--saffron-ink)}
+.bar{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--saffron-ink);transform-origin:0 50%;transform:scaleX(0)}
+@media (min-width:980px){
+  .rail{display:flex}
+  .now{flex:0 0 190px;order:3}
+  .nav-links{margin-left:0;order:4}
+}
+
+/* ---------- opening ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:flex-end;min-height:100vh;min-height:100svh;background:var(--lagoon-deep);color:#fff}
+.hero>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 42%;animation:drift 26s ease-out both}
+@keyframes drift{from{transform:scale(1.09)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,30,35,.42) 0%,rgba(7,30,35,0) 24%,rgba(7,30,35,.08) 42%,rgba(7,30,35,.62) 72%,rgba(7,30,35,.93) 100%)}
+.hero-in{padding-top:120px;padding-bottom:calc(clamp(30px,6vh,70px) + env(safe-area-inset-bottom,0px))}
+.hero .kicker{display:inline-flex;align-items:center;gap:12px;color:#fff}
+.hero .kicker::before{content:"";width:34px;height:1px;background:var(--saffron)}
+.hero h1{font:500 clamp(4.4rem,19.5vw,15.5rem)/.8 var(--serif);letter-spacing:-.035em;margin:.14em 0 .2em -.035em;text-shadow:0 2px 40px rgba(0,0,0,.25)}
+.hero-sub{font:500 clamp(1.35rem,2.9vw,2.15rem)/1.25 var(--serif);max-width:26ch;text-wrap:balance}
+.facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0;margin-top:clamp(26px,4.5vh,48px);border-top:1px solid rgba(255,255,255,.28)}
+.facts div{padding:16px clamp(18px,3vw,44px) 0 0;margin-right:clamp(18px,3vw,44px);border-right:1px solid rgba(255,255,255,.28)}
+.facts div:last-child{border-right:0;margin-right:0;padding-right:0}
+.facts dt{font:500 clamp(1.9rem,3.4vw,2.9rem)/1 var(--serif);font-variant-numeric:lining-nums}
+.facts dd{font:500 .7rem/1.35 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:6px}
+.hero-credit{position:absolute;right:var(--gut-r);top:calc(14px + env(safe-area-inset-top,0px));font:400 .66rem/1 var(--mono);letter-spacing:.06em;color:rgba(255,255,255,.75)}
+@media (max-aspect-ratio:4/5){
+  .hero>img{top:auto;bottom:0;height:124%;object-position:52% 50%}
+}
+@media (max-width:640px){
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div{margin-right:0;padding:14px 12px 12px 0;border-right:0}
+  .facts div:nth-child(odd){border-right:1px solid rgba(255,255,255,.28);margin-right:16px}
+  .facts div:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.28)}
+}
+
+/* ---------- inleiding ---------- */
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:clamp(32px,6vw,96px);align-items:start;padding-top:clamp(64px,10vw,136px);padding-bottom:clamp(64px,10vw,136px);scroll-margin-top:40px}
+.intro-lead{font:500 clamp(1.7rem,3.5vw,2.9rem)/1.2 var(--serif);letter-spacing:-.005em;text-wrap:pretty}
+.intro-lead em{font-style:italic;color:var(--saffron-ink)}
+.ticket{border:1px solid var(--ink);border-radius:3px;background:#fbfcfa}
+.ticket-top{padding:22px 22px 18px}
+.ticket .kicker{color:var(--ink-soft)}
+.cd{display:flex;align-items:baseline;gap:12px;margin-top:10px}
+.cd b{font:500 4.6rem/.9 var(--serif);font-variant-numeric:lining-nums;letter-spacing:-.02em}
+.cd span{font:500 .98rem/1.3 var(--sans)}
+.ticket-date{font:400 .8rem/1.5 var(--mono);color:var(--ink-soft);margin-top:10px}
+.ticket-bot{padding:16px 22px 20px;border-top:1px dashed var(--ink);font-size:.95rem;line-height:1.5}
+@media (max-width:860px){.intro{grid-template-columns:1fr}.ticket{max-width:360px}}
+
+/* ---------- route ---------- */
+.route{background:var(--lagoon);color:var(--foam);padding-block:clamp(64px,10vw,136px);scroll-margin-top:40px}
+.route .kicker{color:var(--saffron)}
+.sec-h{font:500 clamp(2.6rem,6.5vw,5rem)/.95 var(--serif);letter-spacing:-.02em;margin-top:.18em}
+.route-lead{max-width:52ch;margin-top:18px;font-size:1.1rem;color:rgba(234,243,241,.86)}
+.route-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,80px);align-items:center;margin-top:clamp(32px,5vw,64px)}
+.mapbox{max-width:440px;width:100%;margin-inline:auto}
+.map{display:block;width:100%;height:auto;overflow:visible}
+.map .land{fill:rgba(234,243,241,.085);stroke:rgba(234,243,241,.42);stroke-width:1.1;stroke-linejoin:round}
+.map .seg{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.map .auto{stroke:#eaf3f1;stroke-width:2}
+.map .rail-base{stroke:var(--saffron);stroke-width:1.6}
+.map .rail-ties{stroke:var(--saffron);stroke-width:7;stroke-dasharray:1.6 5.4;stroke-linecap:butt}
+.map .tuk{stroke:#eaf3f1;stroke-width:2.6;stroke-dasharray:.1 6.4}
+.map .back{stroke:rgba(234,243,241,.4);stroke-width:1.3;stroke-dasharray:4 5}
+.map .halt{fill:var(--lagoon);stroke:var(--saffron);stroke-width:1.6}
+.map .lbl{font:500 12.5px var(--sans);fill:#eaf3f1}
+.map .lbl-s{font:500 10.5px var(--mono);fill:rgba(234,243,241,.62);letter-spacing:.04em}
+.map .sea{font:500 italic 15px var(--serif);fill:rgba(234,243,241,.36);letter-spacing:.04em}
+.map .pin circle{fill:var(--saffron);stroke:var(--lagoon);stroke-width:2;transition:r .25s,fill .25s}
+.map .pin text{font:500 11px var(--mono);fill:var(--ink);pointer-events:none}
+.map .pin{cursor:pointer}
+.map .pin:hover circle,.map .pin.on circle{fill:#fff}
+.map .air circle{fill:none;stroke:#eaf3f1;stroke-width:1.4}
+.map .air path{fill:#eaf3f1}
+.map .scale{stroke:rgba(234,243,241,.6);stroke-width:1.2;fill:none}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:18px;font:400 .76rem/1.4 var(--mono);color:rgba(234,243,241,.78);justify-content:center}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend svg{width:34px;height:10px;overflow:visible}
+.tt{border-top:1px solid rgba(234,243,241,.2)}
+.tt a{display:grid;grid-template-columns:2.4rem minmax(0,1fr) auto;column-gap:14px;row-gap:2px;align-items:baseline;padding:15px 8px 15px 4px;border-bottom:1px solid rgba(234,243,241,.2);text-decoration:none;transition:background .25s,padding .25s}
+.tt a:hover,.tt a.on{background:rgba(234,243,241,.07);padding-left:12px}
+.tt .n{font:500 .78rem var(--mono);color:var(--saffron)}
+.tt .p{font:500 clamp(1.4rem,5.4vw,1.85rem)/1.05 var(--serif)}
+.tt .d{font:400 .78rem var(--mono);white-space:nowrap;text-align:right}
+.tt .h{grid-column:2;font-size:.93rem;line-height:1.4;color:rgba(234,243,241,.72)}
+.tt .nn{font:400 .74rem var(--mono);color:rgba(234,243,241,.6);text-align:right;white-space:nowrap}
+.route-foot{margin-top:22px;font-size:.98rem;color:rgba(234,243,241,.8);max-width:56ch}
+@media (max-width:880px){.route-grid{grid-template-columns:1fr}}
+
+/* ---------- haltes ---------- */
+.stop{scroll-margin-top:50px}
+.stop-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:32px;row-gap:4px;padding-top:clamp(64px,10vw,136px);padding-bottom:clamp(20px,3vw,40px)}
+.stop-head .kicker{grid-column:1/-1;display:flex;align-items:center;gap:14px;color:var(--ink-soft)}
+.stop-head .nr{color:var(--saffron-ink)}
+.stop-head .kicker i{display:block;width:34px;height:1px;background:var(--saffron-ink)}
+.stop-head h2{font:500 clamp(3.2rem,13vw,9.8rem)/.84 var(--serif);letter-spacing:-.03em;margin-left:-.03em;padding-bottom:.06em}
+.stop-head h2 small{display:block;font:500 italic clamp(1.3rem,3.2vw,2.3rem)/1.1 var(--serif);letter-spacing:0;color:var(--ink-soft);margin:.35em 0 0 .06em}
+.when{display:grid;gap:2px;text-align:right;font:500 .84rem/1.5 var(--mono);padding-bottom:1.1em}
+.when b{font-weight:500;color:var(--saffron-ink)}
+.ph{position:relative}
+.frame{overflow:hidden;background:var(--paper-2);aspect-ratio:16/8.2;max-height:88vh;width:100%}
+.frame img{width:100%;height:100%;object-fit:cover}
+.js .frame img{transform:scale(1.07);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.js .ph.in .frame img{transform:none}
+.cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:10px;font-size:.86rem;line-height:1.45;color:var(--ink-soft)}
+.cap span{font:400 .7rem/1.6 var(--mono);letter-spacing:.03em;white-space:nowrap}
+.stop-body{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:clamp(30px,6vw,96px);padding-top:clamp(34px,5vw,72px);padding-bottom:clamp(30px,5vw,60px)}
+.side{display:grid;gap:26px;align-content:start}
+.side h3{font:500 .72rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.arrive{border-top:2px solid var(--ink);padding-top:14px}
+.arrive p{font-size:1rem;line-height:1.5}
+.sleep{background:var(--paper-2);border-radius:3px;padding:20px 20px 18px}
+.hotel{font:600 1.75rem/1.05 var(--serif);letter-spacing:-.005em}
+.sleep .room{font-size:.95rem;line-height:1.45;margin-top:8px;color:var(--ink-soft)}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px;font:400 .76rem/1.3 var(--mono)}
+.score{background:var(--lagoon);color:#fff;padding:5px 7px;border-radius:3px 3px 3px 0;font-weight:500}
+.go{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font:600 .9rem/1 var(--sans);text-decoration:none;border-bottom:1px solid var(--ink);padding:6px 0}
+.go:hover{color:var(--saffron-ink);border-color:var(--saffron-ink)}
+.lead{font:500 clamp(1.5rem,2.7vw,2.1rem)/1.28 var(--serif);text-wrap:pretty;max-width:30em}
+.plans{margin-top:clamp(22px,3vw,36px);border-bottom:1px solid var(--line);max-width:44rem}
+.plans li{padding:18px 0;border-top:1px solid var(--line)}
+.plans .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.plans h3{font:700 1.05rem/1.35 var(--sans)}
+.plans time,.plans .t{font:500 .8rem/1 var(--mono);color:var(--saffron-ink);white-space:nowrap;border:1px solid currentColor;border-radius:99px;padding:5px 9px}
+.plans p{margin-top:4px;color:var(--ink-soft);max-width:38rem}
+.inset{margin-top:clamp(30px,4vw,52px);max-width:44rem}
+.inset .frame{aspect-ratio:3/2;max-height:none;border-radius:2px}
+.inset.wide .frame{aspect-ratio:21/9}
+@media (min-width:861px){.side{position:sticky;top:84px}}
+@media (max-width:860px){
+  .stop-head{grid-template-columns:1fr}
+  .when{display:flex;flex-wrap:wrap;gap:4px 16px;text-align:left;padding-bottom:0;margin-top:12px}
+  .stop-body{grid-template-columns:1fr}
+  .stop-main{order:1}.side{order:2}
+  .frame{aspect-ratio:4/3;max-height:none}
+  .inset .frame{aspect-ratio:3/2}
+}
+@media (max-width:560px){
+  .stop>.ph>.frame{aspect-ratio:5/6}
+  .brand{display:none}
+}
+
+/* ---------- de treinreis ---------- */
+.ride{position:relative;isolation:isolate;overflow:hidden;color:#fff;background:var(--lagoon-deep);margin-top:clamp(40px,7vw,96px)}
+.ride>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.ride::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(7,30,35,.86) 0%,rgba(7,30,35,.58) 46%,rgba(7,30,35,.12) 100%),linear-gradient(0deg,rgba(7,30,35,.55),rgba(7,30,35,0) 45%)}
+.ride-in{padding-top:clamp(84px,13vw,190px);padding-bottom:clamp(84px,13vw,190px)}
+.ride .kicker{color:var(--saffron)}
+.ride h2{font:500 clamp(3rem,9.5vw,7.6rem)/.88 var(--serif);letter-spacing:-.025em;margin:.16em 0 .3em}
+.ride h2 em{font-style:italic}
+.ride-text{max-width:34ch;font:500 clamp(1.2rem,2.1vw,1.55rem)/1.4 var(--serif)}
+.track{position:relative;max-width:560px;height:66px;margin:clamp(26px,4vw,44px) 0 0}
+.track::before{content:"";position:absolute;left:0;right:0;top:15px;height:10px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.85) 0 2px,transparent 2px 12px)}
+.track::after{content:"";position:absolute;left:0;right:0;top:19px;height:2px;background:#fff}
+.track .st{position:absolute;top:34px;font:500 .74rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.track .st b{display:block;font-weight:400;color:rgba(255,255,255,.75);letter-spacing:.02em;text-transform:none}
+.track .a{left:0}.track .b{right:0;text-align:right}
+.track .train{position:absolute;top:9px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 5px rgba(233,162,59,.28);transition:left .12s linear}
+.ride-credit{position:absolute;right:var(--gut-r);bottom:12px;font:400 .66rem/1 var(--mono);letter-spacing:.06em;color:rgba(255,255,255,.75)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4vw,28px);padding-top:clamp(14px,2.4vw,28px)}
+.duo .frame{aspect-ratio:3/2;max-height:none}
+@media (max-width:700px){
+  .duo{grid-template-columns:1fr}
+  .ride::after{background:linear-gradient(180deg,rgba(7,30,35,.62) 0%,rgba(7,30,35,.7) 60%,rgba(7,30,35,.5) 100%)}
+}
+
+/* ---------- praktisch ---------- */
+.info{background:var(--paper-2);margin-top:clamp(64px,10vw,136px);padding-block:clamp(64px,10vw,128px);scroll-margin-top:40px}
+.info .kicker{color:var(--saffron-ink)}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px);margin-top:clamp(32px,5vw,60px)}
+.block{border-top:2px solid var(--ink);padding-top:16px}
+.block h3,.beds h3{font:600 1.7rem/1.1 var(--serif);margin-bottom:10px}
+.muted{color:var(--ink-soft);font-size:.95rem;line-height:1.5}
+.flight{display:grid;grid-template-columns:3.4rem 1fr auto 1fr;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.flight:first-of-type{margin-top:12px;border-top:1px solid var(--line)}
+.flight .dir{font:500 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--saffron-ink)}
+.flight .ft{font:500 1.5rem/1 var(--serif);font-variant-numeric:lining-nums}
+.flight .ft small{display:block;font:400 .72rem/1.4 var(--mono);color:var(--ink-soft);margin-bottom:4px}
+.flight .ar{color:var(--ink-soft)}
+.costs table{width:100%;border-collapse:collapse;margin-top:6px;font-variant-numeric:tabular-nums lining-nums}
+.costs td{padding:11px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.costs td:last-child{text-align:right;white-space:nowrap;font:500 .95rem var(--mono)}
+.costs td small{display:block;color:var(--ink-soft);font-size:.84rem}
+.costs tr.sum td{border-bottom:0;padding-top:14px;font-weight:700}
+.costs tr.sum td:last-child{font:600 1.7rem/1 var(--serif)}
+.costs .muted{margin-top:12px}
+.modes li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);align-items:start}
+.modes li:first-child{border-top:1px solid var(--line);margin-top:12px}
+.modes svg{width:40px;height:12px;margin-top:8px;overflow:visible}
+.modes b{display:block;font-weight:700}
+.modes span{color:var(--ink-soft);font-size:.95rem;line-height:1.45;display:block}
+.beds{margin-top:clamp(40px,6vw,76px)}
+.beds h3{border-top:2px solid var(--ink);padding-top:16px}
+.bedlist a{display:grid;grid-template-columns:2.2rem minmax(0,9rem) minmax(0,1fr) auto auto;gap:6px 18px;align-items:baseline;padding:13px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s}
+.bedlist li:first-child a{border-top:1px solid var(--line)}
+.bedlist a:hover{background:rgba(255,255,255,.55)}
+.bedlist .n{font:500 .76rem var(--mono);color:var(--saffron-ink)}
+.bedlist .pl{font-weight:600}
+.bedlist .ho{font:600 1.3rem/1.15 var(--serif)}
+.bedlist .ni,.bedlist .pr{font:400 .8rem var(--mono);white-space:nowrap;color:var(--ink-soft);text-align:right}
+.bedlist .pr{color:var(--ink);min-width:4.2rem}
+.status{margin-top:18px;max-width:60ch}
+@media (max-width:960px){.info-grid{grid-template-columns:1fr 1fr}.info-grid .move{grid-column:1/-1}}
+@media (max-width:680px){
+  .info-grid{grid-template-columns:1fr}
+  .bedlist a{grid-template-columns:2.2rem minmax(0,1fr) auto;row-gap:2px}
+  .bedlist .pl{grid-column:2}.bedlist .ho{grid-column:2;grid-row:2}
+  .bedlist .ni{grid-column:3;grid-row:1}.bedlist .pr{grid-column:3;grid-row:2}
+}
+
+/* ---------- slot ---------- */
+.foot{background:var(--lagoon-deep);color:var(--foam);padding-top:clamp(64px,10vw,130px);padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+.bye{font:500 italic clamp(3.6rem,13vw,10rem)/.9 var(--serif);letter-spacing:-.03em}
+.bye-sub{font:500 clamp(1.2rem,2.2vw,1.6rem)/1.35 var(--serif);margin-top:16px;color:rgba(234,243,241,.85);max-width:30ch}
+.credits{margin-top:clamp(48px,7vw,90px);border-top:1px solid rgba(234,243,241,.2);padding-top:20px}
+.credits h3{font:500 .72rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--saffron);margin-bottom:12px}
+.credits ul{columns:2;column-gap:40px;font-size:.84rem;line-height:1.5;color:rgba(234,243,241,.78)}
+.credits li{break-inside:avoid;padding:3px 0}
+.credits a{text-decoration-color:rgba(234,243,241,.4);text-underline-offset:3px}
+.credits a:hover{color:#fff}
+.small{margin-top:28px;font:400 .72rem/1.6 var(--mono);color:rgba(234,243,241,.55)}
+@media (max-width:700px){.credits ul{columns:1}}
+
+/* ---------- beweging ---------- */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero>img{animation:none}
+  .js .rv,.js .frame img{opacity:1;transform:none;transition:none}
+  .track .train{transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Reisroute">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Sri Lanka ’27</a>
+    <div class="rail">
+      <a href="#sigiriya" title="Sigiriya">1</a>
+      <a href="#kandy" title="Kandy">2</a>
+      <a href="#adams-peak" title="Adam's Peak">3</a>
+      <a href="#ella" title="Ella">4</a>
+      <a href="#tissamaharama" title="Tissamaharama">5</a>
+      <a href="#hiriketiya" title="Hiriketiya">6</a>
+      <a href="#ahangama" title="Ahangama">7</a>
+      <a href="#galle" title="Galle Fort">8</a>
+    </div>
+    <span class="now" aria-live="polite">De reis</span>
+    <div class="nav-links"><a href="#route">Route</a><a href="#praktisch">Praktisch</a></div>
+  </div>
+  <div class="bar"></div>
+</nav>
+
+<header class="hero" id="top">
+  <img src="fotos/sigiriya-1920.webp" srcset="fotos/sigiriya-960.webp 960w, fotos/sigiriya-1920.webp 1920w" sizes="100vw" width="1920" height="1280" alt="Lion Rock in Sigiriya steekt boven het oerwoud uit, gezien vanaf Pidurangala Rock" fetchpriority="high">
+  <p class="hero-credit">Foto: C.J.Hatton</p>
+  <div class="wrap hero-in">
+    <p class="kicker">4 – 24 januari 2027</p>
+    <h1>Sri Lanka</h1>
+    <p class="hero-sub">Drie weken van de rotsen van Sigiriya naar de muren van Galle.</p>
+    <dl class="facts">
+      <div><dt>19</dt><dd>nachten<br>op het eiland</dd></div>
+      <div><dt>8</dt><dd>plekken<br>in één lus</dd></div>
+      <div><dt>2.243 m</dt><dd>de top van<br>Adam's Peak</dd></div>
+      <div><dt>9</dt><dd>nachten in de<br>surfdorpjes</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap intro" id="reis">
+  <p class="intro-lead rv">We beginnen met <em>rotsen en tempels</em> en een nachtelijke klim naar Adam's Peak. Daarna nemen we de beroemde <em>trein door de theeplantages</em>, gaan we op <em>safari</em> voor luipaarden en olifanten, en eindigen we met negen nachten in de <em>surfdorpjes</em> aan de zuidkust en een laatste avond in Galle Fort.</p>
+  <aside class="ticket rv" aria-label="Vertrek">
+    <div class="ticket-top">
+      <p class="kicker">Vertrek</p>
+      <p class="cd" id="cd"><b>4 jan</b><span>maandag,<br>15:05 uur</span></p>
+      <p class="ticket-date">ma 4 januari 2027 – zo 24 januari 2027</p>
+    </div>
+    <p class="ticket-bot">In januari is het droog en zonnig in het zuiden en in het heuvelland. Precies het goede moment.</p>
+  </aside>
+</section>
+
+<section class="route" id="route">
+  <div class="wrap">
+    <p class="kicker">De route</p>
+    <h2 class="sec-h">Acht haltes, één lus</h2>
+    <p class="route-lead">We reizen van het vliegveld naar het binnenland en via de zuidkust weer terug. Tik op een plek om er meteen heen te gaan.</p>
+    <div class="route-grid">
+      <div class="mapbox rv">
+        <svg class="map" viewBox="-42 -4 432 642" role="img" aria-labelledby="map-t map-d">
+          <title id="map-t">Routekaart van Sri Lanka</title>
+          <desc id="map-d">De route loopt van het vliegveld bij Colombo naar Sigiriya, Kandy en Adam's Peak, met de trein naar Ella, daarna naar Tissamaharama en langs de zuidkust via Hiriketiya en Ahangama naar Galle.</desc>
+          <defs>
+            <radialGradient id="hills"><stop offset="0" stop-color="#8fbf8a" stop-opacity=".42"/><stop offset="1" stop-color="#8fbf8a" stop-opacity="0"/></radialGradient>
+          </defs>
+          <path class="land" d="M55.5 28.5C57.3 23.7 68.5 21.4 78.0 19.5C87.5 17.6 102.5 12.2 112.5 17.2C122.5 22.2 128.8 39.9 138.0 49.5C147.3 59.1 158.0 66.3 168.0 75.0C178.0 83.7 189.0 90.7 198.0 102.0C207.0 113.2 214.3 129.5 222.0 142.5C229.8 155.5 238.0 169.2 244.5 180.0C251.0 190.7 256.0 198.7 261.0 207.0C266.0 215.2 270.0 218.5 274.5 229.5C279.0 240.5 281.8 260.5 288.0 273.0C294.3 285.5 305.0 294.0 312.0 304.5C319.0 315.0 323.8 322.5 330.0 336.0C336.3 349.5 345.0 369.0 349.5 385.5C354.0 402.0 356.7 421.5 357.0 435.0C357.2 448.5 353.8 455.2 351.0 466.5C348.3 477.7 346.5 491.0 340.5 502.5C334.5 514.0 326.0 525.7 315.0 535.5C304.0 545.2 286.5 554.5 274.5 561.0C262.5 567.5 256.3 569.7 243.0 574.5C229.8 579.2 208.2 584.5 195.0 589.5C181.7 594.5 172.3 602.7 163.5 604.5C154.8 606.2 151.8 602.7 142.5 600.0C133.3 597.2 118.0 595.2 108.0 588.0C98.0 580.7 88.5 567.5 82.5 556.5C76.5 545.5 75.8 534.0 72.0 522.0C68.3 510.0 63.5 496.0 60.0 484.5C56.5 473.0 52.8 465.2 51.0 453.0C49.3 440.7 50.7 427.2 49.5 411.0C48.2 394.7 44.8 374.0 43.5 355.5C42.3 337.0 43.8 316.0 42.0 300.0C40.2 284.0 31.2 272.0 33.0 259.5C34.7 247.0 47.2 238.2 52.5 225.0C57.7 211.8 62.8 192.5 64.5 180.0C66.3 167.5 67.8 158.2 63.0 150.0C58.2 141.8 35.0 133.5 36.0 130.5C37.0 127.5 60.5 137.5 69.0 132.0C77.5 126.5 84.7 109.5 87.0 97.5C89.2 85.5 85.7 68.2 82.5 60.0C79.2 51.7 72.0 53.2 67.5 48.0C63.0 42.7 53.8 33.2 55.5 28.5Z"/>
+          <ellipse cx="194" cy="446" rx="74" ry="88" fill="url(#hills)"/>
+          <text class="sea" x="262" y="150">Golf van Bengalen</text>
+          <text class="sea" x="266" y="622">Indische Oceaan</text>
+          <text class="lbl-s" x="194" y="512" text-anchor="middle">heuvelland</text>
+
+          <path class="seg back" d="M107.5 587.5C104.1 582.1 92.4 569.2 87.0 555.0C81.6 540.8 78.7 520.0 75.0 502.5C71.3 485.0 67.4 464.5 64.5 450.0C61.6 435.5 58.8 421.2 57.6 415.5"/>
+          <path class="seg auto" d="M57.6 415.5C66.8 407.0 94.6 381.2 112.5 364.5C130.4 347.7 152.2 325.9 165.0 315.0C177.7 304.1 185.0 301.6 189.0 298.9"/>
+          <path class="seg auto" d="M189.0 298.9C186.5 307.4 177.1 332.8 174.0 349.5C170.9 366.1 170.9 390.6 170.3 398.8"/>
+          <path class="seg auto" d="M170.3 398.8C168.6 404.1 161.4 421.5 160.5 430.5C159.6 439.5 166.2 446.7 165.0 453.0C163.8 459.2 155.3 465.5 153.3 468.0"/>
+          <path class="seg auto" d="M153.3 468.0C154.3 466.7 157.2 462.0 159.0 460.5C160.8 458.9 163.4 459.0 164.2 458.7"/>
+          <path class="seg rail-ties" d="M164.2 458.7C165.9 457.4 170.2 451.9 174.0 450.7C177.7 449.5 182.5 449.1 186.8 451.5C191.0 453.9 194.4 460.9 199.5 465.0C204.6 469.1 213.4 475.7 217.5 476.2C221.6 476.7 221.8 470.3 224.3 468.0C226.7 465.7 230.7 463.4 232.0 462.4"/>
+          <path class="seg rail-base" d="M164.2 458.7C165.9 457.4 170.2 451.9 174.0 450.7C177.7 449.5 182.5 449.1 186.8 451.5C191.0 453.9 194.4 460.9 199.5 465.0C204.6 469.1 213.4 475.7 217.5 476.2C221.6 476.7 221.8 470.3 224.3 468.0C226.7 465.7 230.7 463.4 232.0 462.4"/>
+          <path class="seg auto" d="M232.0 462.4C234.1 466.6 240.2 477.1 244.5 487.5C248.8 497.9 254.0 514.5 258.0 525.0C261.9 535.5 266.5 546.2 268.2 550.5"/>
+          <path class="seg tuk" d="M268.2 550.5C264.0 553.7 252.7 564.7 243.0 570.0C233.3 575.2 218.0 579.0 210.0 582.0C202.0 585.0 200.2 585.3 195.0 588.0C189.7 590.7 181.2 596.5 178.5 598.2"/>
+          <path class="seg tuk" d="M178.5 598.2C174.7 598.4 162.5 599.6 156.0 599.2C149.5 598.9 143.9 596.6 139.5 596.2C135.1 595.9 131.4 596.9 129.7 597.0"/>
+          <path class="seg tuk" d="M129.7 597.0C127.9 596.4 122.2 594.8 118.5 593.2C114.8 591.7 109.4 588.5 107.5 587.5"/>
+          <circle class="halt" cx="164.2" cy="458.7" r="3.4"/>
+
+          <g class="air"><circle cx="57.6" cy="415.5" r="6.5"/><path d="M57.6 410.6l1.3 3.6 4 2-4 .6-.6 2.6-.7-.1-.7.1-.6-2.6-4-.6 4-2z"/></g>
+          <text class="lbl-s" x="45" y="412" text-anchor="end">vliegveld</text>
+          <text class="lbl-s" x="45" y="424" text-anchor="end">Colombo</text>
+
+          <text class="lbl" x="205" y="303.2">Sigiriya</text>
+          <text class="lbl" x="186" y="403">Kandy</text>
+          <text class="lbl" x="138" y="472.3" text-anchor="end">Adam's Peak</text>
+          <text class="lbl" x="248" y="459">Ella</text>
+          <text class="lbl" x="284" y="554.6">Tissamaharama</text>
+          <text class="lbl" x="188" y="621">Hiriketiya</text>
+          <text class="lbl" x="128" y="625" text-anchor="middle">Ahangama</text>
+          <text class="lbl" x="92" y="590" text-anchor="end">Galle</text>
+
+          <a class="pin" href="#sigiriya" data-stop="1" aria-label="Halte 1, Sigiriya"><circle cx="189" cy="298.9" r="10.5"/><text x="189" y="302.8" text-anchor="middle">1</text></a>
+          <a class="pin" href="#kandy" data-stop="2" aria-label="Halte 2, Kandy"><circle cx="170.3" cy="398.8" r="10.5"/><text x="170.3" y="402.7" text-anchor="middle">2</text></a>
+          <a class="pin" href="#adams-peak" data-stop="3" aria-label="Halte 3, Adam's Peak"><circle cx="153.3" cy="468" r="10.5"/><text x="153.3" y="471.9" text-anchor="middle">3</text></a>
+          <a class="pin" href="#ella" data-stop="4" aria-label="Halte 4, Ella"><circle cx="232" cy="462.4" r="10.5"/><text x="232" y="466.3" text-anchor="middle">4</text></a>
+          <a class="pin" href="#tissamaharama" data-stop="5" aria-label="Halte 5, Tissamaharama"><circle cx="268.2" cy="550.5" r="10.5"/><text x="268.2" y="554.4" text-anchor="middle">5</text></a>
+          <a class="pin" href="#hiriketiya" data-stop="6" aria-label="Halte 6, Hiriketiya"><circle cx="178.5" cy="598.2" r="10.5"/><text x="178.5" y="602.1" text-anchor="middle">6</text></a>
+          <a class="pin" href="#ahangama" data-stop="7" aria-label="Halte 7, Ahangama"><circle cx="129.7" cy="597" r="10.5"/><text x="129.7" y="600.9" text-anchor="middle">7</text></a>
+          <a class="pin" href="#galle" data-stop="8" aria-label="Halte 8, Galle Fort"><circle cx="107.5" cy="584.5" r="10.5"/><text x="107.5" y="588.4" text-anchor="middle">8</text></a>
+
+          <path class="scale" d="M-30 606v5h67.6v-5"/>
+          <text class="lbl-s" x="3.8" y="626" text-anchor="middle">50 km</text>
+          <path class="scale" d="M352 34V8m-5 7 5-7 5 7"/>
+          <text class="lbl-s" x="352" y="48" text-anchor="middle">N</text>
+        </svg>
+        <p class="legend">
+          <span><svg viewBox="0 0 34 10" aria-hidden="true"><path d="M0 5h34" stroke="#eaf3f1" stroke-width="2" fill="none"/></svg>chauffeur</span>
+          <span><svg viewBox="0 0 34 10" aria-hidden="true"><path d="M0 5h34" stroke="#e9a23b" stroke-width="1.6" fill="none"/><path d="M1 5h33" stroke="#e9a23b" stroke-width="8" stroke-dasharray="1.6 5.4" fill="none"/></svg>trein</span>
+          <span><svg viewBox="0 0 34 10" aria-hidden="true"><path d="M1 5h33" stroke="#eaf3f1" stroke-width="2.8" stroke-dasharray=".1 6.4" stroke-linecap="round" fill="none"/></svg>eigen tuktuk</span>
+        </p>
+      </div>
+      <div class="rv">
+        <ol class="tt">
+          <li><a href="#sigiriya" data-stop="1"><span class="n">01</span><span class="p">Sigiriya</span><span class="d">5 – 8 jan</span><span class="h">Zonsopkomst op Pidurangala Rock</span><span class="nn">3 nachten</span></a></li>
+          <li><a href="#kandy" data-stop="2"><span class="n">02</span><span class="p">Kandy</span><span class="d">8 – 10 jan</span><span class="h">De Tempel van de tand</span><span class="nn">2 nachten</span></a></li>
+          <li><a href="#adams-peak" data-stop="3"><span class="n">03</span><span class="p">Adam's Peak</span><span class="d">10 – 11 jan</span><span class="h">Nachtelijke klim naar de top</span><span class="nn">1 nacht</span></a></li>
+          <li><a href="#ella" data-stop="4"><span class="n">04</span><span class="p">Ella</span><span class="d">11 – 13 jan</span><span class="h">Treinreis en Nine Arch Bridge</span><span class="nn">2 nachten</span></a></li>
+          <li><a href="#tissamaharama" data-stop="5"><span class="n">05</span><span class="p">Tissamaharama</span><span class="d">13 – 14 jan</span><span class="h">Safari in Yala</span><span class="nn">1 nacht</span></a></li>
+          <li><a href="#hiriketiya" data-stop="6"><span class="n">06</span><span class="p">Hiriketiya</span><span class="d">14 – 18 jan</span><span class="h">Surfen in de baai</span><span class="nn">4 nachten</span></a></li>
+          <li><a href="#ahangama" data-stop="7"><span class="n">07</span><span class="p">Ahangama</span><span class="d">18 – 23 jan</span><span class="h">Surfen, yoga en walvissen</span><span class="nn">5 nachten</span></a></li>
+          <li><a href="#galle" data-stop="8"><span class="n">08</span><span class="p">Galle Fort</span><span class="d">23 – 24 jan</span><span class="h">Zonsondergang op de muren</span><span class="nn">1 nacht</span></a></li>
+        </ol>
+        <p class="route-foot">Met een chauffeur door het binnenland, met de trein van Hatton naar Ella, en aan de zuidkust in onze eigen tuktuk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 -->
+<section class="stop" id="sigiriya" data-name="Sigiriya">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">01</span><i></i><span>Culturele driehoek</span></p>
+    <h2>Sigiriya</h2>
+    <p class="when"><span>di 5 – vr 8 januari</span><b>3 nachten</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/sigiriya-ochtend-1920.webp" srcset="fotos/sigiriya-ochtend-960.webp 960w, fotos/sigiriya-ochtend-1920.webp 1920w" sizes="100vw" width="1920" height="1440" loading="lazy" decoding="async" style="object-position:50% 36%" alt="Lion Rock in roze schemerlicht boven een nevelig oerwoud"></div>
+    <figcaption class="wrap cap">Lion Rock, gezien vanaf Pidurangala Rock. Hier staan we als de zon opkomt. <span>Foto: Ji-Elle</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Dinsdag om 08:45 uur landen, daarna 4 uur met de chauffeur naar het binnenland.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Sigiri Enaya Cottage</p>
+        <p class="room">Deluxe kamer met eigen terras en uitzicht op de tuin en de bergen. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,5</span><span>3 nachten · € 112</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/sigiri-enaya-cottage.nl.html?checkin=2027-01-05&amp;checkout=2027-01-08&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Sigiriya ligt in het hart van het oude Sri Lanka. We hebben hier een dag extra om bij te komen van de reis, tussen de rotsen, de rijstvelden en de tempels.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Zonsopkomst op Pidurangala Rock</h3><time>05:15</time></div><p>Met de tuktuk naar het pad, 20 à 30 minuten klimmen, en dan kijken we recht op Lion Rock terwijl de zon opkomt.</p></li>
+        <li><div class="top"><h3>Golden Temple van Dambulla</h3><span class="t">½ uur rijden</span></div><p>Grottempels vol boeddhabeelden en schilderingen.</p></li>
+        <li><div class="top"><h3>Kookworkshop of Polonnaruwa</h3><span class="t">extra dag</span></div><p>Koken bij een familie in het dorp, of een fietstocht langs de ruïnes van de oude koningsstad Polonnaruwa.</p></li>
+      </ul>
+      <figure class="inset ph rv">
+        <div class="frame"><img src="fotos/dambulla-1920.webp" srcset="fotos/dambulla-960.webp 960w, fotos/dambulla-1920.webp 1920w" sizes="(min-width:861px) 60vw, 100vw" width="1920" height="1282" loading="lazy" decoding="async" alt="Liggende Boeddha onder een beschilderd rotsplafond"></div>
+        <figcaption class="cap">De liggende Boeddha in de grottempel van Dambulla. <span>Foto: Jakub Hałun</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="stop" id="kandy" data-name="Kandy">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">02</span><i></i><span>Culturele hoofdstad</span></p>
+    <h2>Kandy</h2>
+    <p class="when"><span>vr 8 – zo 10 januari</span><b>2 nachten</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/kandy-1920.webp" srcset="fotos/kandy-960.webp 960w, fotos/kandy-1920.webp 1920w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" style="object-position:42% 50%" alt="Witte tempel met rood dak aan een gracht, omringd door palmen"></div>
+    <figcaption class="wrap cap">De Tempel van de tand, de heiligste tempel van het land. <span>Foto: A.Savin</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Met de chauffeur van Sigiriya naar het zuiden, de heuvels in.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Anna Asia Villa</p>
+        <p class="room">Luxe kamer met balkon. Alleen voor volwassenen. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,7</span><span>2 nachten · € 106</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/anna-asia-villa-kandy.nl.html?checkin=2027-01-08&amp;checkout=2027-01-10&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Kandy is de culturele hoofdstad van Sri Lanka, aan een meer tussen groene heuvels. Twee dagen voor tempels, tuinen en een rustig tempo.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Tempel van de tand</h3><time>18:30</time></div><p>De heiligste tempel van het land. Om half zeven is er een ritueel, daar willen we bij zijn.</p></li>
+        <li><div class="top"><h3>Rond Kandy Lake</h3><span class="t">zonsondergang</span></div><p>Een wandeling om het meer en omhoog naar het grote witte boeddhabeeld boven de stad.</p></li>
+        <li><div class="top"><h3>Botanische tuin van Peradeniya</h3></div><p>En daarna over de centrale markt.</p></li>
+        <li><div class="top"><h3>Een rustige dag</h3></div><p>Opladen voor Adam's Peak.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="stop" id="adams-peak" data-name="Adam's Peak">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">03</span><i></i><span>Heuvelland</span></p>
+    <h2>Adam's Peak</h2>
+    <p class="when"><span>zo 10 – ma 11 januari</span><b>1 nacht</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/adams-peak-1920.webp" srcset="fotos/adams-peak-960.webp 960w, fotos/adams-peak-1920.webp 1920w" sizes="100vw" width="1920" height="1440" loading="lazy" decoding="async" style="object-position:40% 42%" alt="Oranje zonsopkomst boven bergruggen in de mist, met gekleurde gebedsvlaggen op de voorgrond"></div>
+    <figcaption class="wrap cap">Zonsopkomst boven de wolken, vanaf de top van Adam's Peak. <span>Foto: Eli Solidum</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Met de chauffeur van Kandy naar Dalhousie, het dorp onderaan de berg.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Hugging Clouds</p>
+        <p class="room">Tweepersoonskamer met uitzicht op de bergen, onderaan de berg. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,1</span><span>1 nacht · € 26</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/hugging-clouds.nl.html?checkin=2027-01-10&amp;checkout=2027-01-11&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Adam's Peak is een heilige berg van 2.243 meter. In januari loopt het pelgrimspad 's nachts verlicht naar de top, en wij lopen mee.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>De klim</h3><time>02:00</time></div><p>Ongeveer 5.500 treden en 3 à 4 uur klimmen. Het is maandag, dus rustiger dan in het weekend.</p></li>
+        <li><div class="top"><h3>Zonsopkomst op de top</h3></div><p>Boven de wolken zien we de zon opkomen. Daarna dalen we af naar het dorp.</p></li>
+        <li><div class="top"><h3>Naar het station van Hatton</h3><time>12:02</time></div><p>Daar vertrekt de trein naar Ella.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- de treinreis -->
+<section class="ride" id="trein" aria-labelledby="ride-h">
+  <img src="fotos/trein-vallei-1920.webp" srcset="fotos/trein-vallei-960.webp 960w, fotos/trein-vallei-1920.webp 1920w" sizes="100vw" width="1920" height="1200" loading="lazy" decoding="async" alt="Blauwe trein rijdt door groene heuvels, met op de achtergrond een stenen spoorbrug">
+  <div class="wrap ride-in">
+    <p class="kicker rv">Maandag 11 januari</p>
+    <h2 id="ride-h" class="rv">Met de trein<br><em>door de thee</em></h2>
+    <p class="ride-text rv">Dit is het mooiste stuk van de beroemde treinreis: vier uur door theeplantages, langs watervallen en over bergruggen.</p>
+    <div class="track rv" aria-hidden="true">
+      <span class="st a">Hatton<b>12:02</b></span>
+      <span class="st b">Ella<b>4 uur later</b></span>
+      <span class="train"></span>
+    </div>
+  </div>
+  <p class="ride-credit">Foto: A.Savin</p>
+</section>
+<div class="wrap duo">
+  <figure class="ph rv">
+    <div class="frame"><img src="fotos/thee-1920.webp" srcset="fotos/thee-960.webp 960w, fotos/thee-1920.webp 1920w" sizes="(min-width:701px) 50vw, 100vw" width="1920" height="1285" loading="lazy" decoding="async" alt="Groene theestruiken op een helling met een rood zandpad en bergen in de verte"></div>
+    <figcaption class="cap">Theeplantage bij Haputale, langs het spoor. <span>Foto: Adbar</span></figcaption>
+  </figure>
+  <figure class="ph rv">
+    <div class="frame"><img src="fotos/station-1920.webp" srcset="fotos/station-960.webp 960w, fotos/station-1920.webp 1920w" sizes="(min-width:701px) 50vw, 100vw" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:70% 50%" alt="Rode locomotief stopt bij een klein station tussen de bomen"></div>
+    <figcaption class="cap">Kithalella, een halte vlak voor Ella. <span>Foto: A.Savin</span></figcaption>
+  </figure>
+</div>
+
+<!-- 04 -->
+<section class="stop" id="ella" data-name="Ella">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">04</span><i></i><span>Heuvelland</span></p>
+    <h2>Ella</h2>
+    <p class="when"><span>ma 11 – wo 13 januari</span><b>2 nachten</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/ella-brug-1920.webp" srcset="fotos/ella-brug-960.webp 960w, fotos/ella-brug-1920.webp 1920w" sizes="100vw" width="1920" height="1281" loading="lazy" decoding="async" style="object-position:58% 78%" alt="Blauwe trein rijdt over een hoge stenen boogbrug midden in het bos"></div>
+    <figcaption class="wrap cap">De trein op de Nine Arch Bridge, in de jungle bij Ella. <span>Foto: A.Savin</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Met de trein uit Hatton. Aan het eind van de middag stappen we uit in Ella.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Ella Wood Cabin</p>
+        <p class="room">Superior kamer met kingsize bed, balkon en uitzicht op de bergen. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,1</span><span>2 nachten · € 114</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/ella-wood-cabin.nl.html?checkin=2027-01-11&amp;checkout=2027-01-13&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Ella is een relaxed bergdorp vol cafés, met uitzicht over de Ella Gap. Wandelen, thee drinken en kijken naar de trein.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Nine Arch Bridge</h3><span class="t">elk uur een trein</span></div><p>De beroemde stenen spoorbrug in de jungle. Vanaf Café Soul kijk je er met een drankje op uit.</p></li>
+        <li><div class="top"><h3>Little Adam's Peak</h3><span class="t">zonsondergang</span></div><p>Een makkelijke wandeling van een uur naar een top met uitzicht.</p></li>
+        <li><div class="top"><h3>Halpewatte theefabriek</h3><span class="t">'s ochtends</span></div><p>Zien hoe de thee gemaakt wordt.</p></li>
+        <li><div class="top"><h3>Matey Hut</h3><span class="t">'s avonds</span></div><p>Rijst met curry's.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="stop" id="tissamaharama" data-name="Tissamaharama">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">05</span><i></i><span>Het wilde zuiden</span></p>
+    <h2>Tissamaharama <small>en Yala National Park</small></h2>
+    <p class="when"><span>wo 13 – do 14 januari</span><b>1 nacht</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/yala-1920.webp" srcset="fotos/yala-960.webp 960w, fotos/yala-1920.webp 1920w" sizes="100vw" width="1920" height="1280" loading="lazy" decoding="async" style="object-position:50% 46%" alt="Een luipaard loopt over een zandpad recht op de camera af"></div>
+    <figcaption class="wrap cap">Een Sri Lankaans luipaard in Yala National Park. <span>Foto: AdrianRanasinghe</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>In 3 uur van de bergen naar de vlakte in het zuiden. In Tissa krijgen we onze eigen tuktuk voor de rest van de reis.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Ariya Tissa</p>
+        <p class="room">Deluxe kamer met kingsize bed. Alleen voor volwassenen. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,8</span><span>1 nacht · € 43</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/ariya-tissa.nl.html?checkin=2027-01-13&amp;checkout=2027-01-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Yala is het bekendste park van Sri Lanka om luipaarden te zien. Er lopen ook olifanten, krokodillen, buffels en pauwen.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Tissa Lake</h3><span class="t">zonsondergang</span></div><p>Aan het meer, met honderden vleermuizen in de bomen.</p></li>
+        <li><div class="top"><h3>Safari in Yala</h3><time>05:00</time></div><p>Met de jeep het park in, als de dieren wakker worden.</p></li>
+        <li><div class="top"><h3>Naar de kust</h3><span class="t">2 uur</span></div><p>Na de safari rijden we zelf met de tuktuk naar zee.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="stop" id="hiriketiya" data-name="Hiriketiya">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">06</span><i></i><span>Zuidkust</span></p>
+    <h2>Hiriketiya</h2>
+    <p class="when"><span>do 14 – ma 18 januari</span><b>4 nachten</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/hiriketiya-1920.webp" srcset="fotos/hiriketiya-960.webp 960w, fotos/hiriketiya-1920.webp 1920w" sizes="100vw" width="1920" height="1200" loading="lazy" decoding="async" style="object-position:48% 55%" alt="Surfer op een golf in een baai met palmbomen en een strand op de achtergrond"></div>
+    <figcaption class="wrap cap">Surfen in de baai van Hiriketiya. <span>Foto: Zoshua Colah</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Na de safari in 2 uur met de tuktuk van Tissa naar de kust.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Breath House</p>
+        <p class="room">Tweepersoonskamer met balkon, 200 meter van de baai. Ontbijt kan erbij voor € 5 per persoon.</p>
+        <p class="meta"><span class="score">9,3</span><span>4 nachten · € 200</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/lagoon-house-hiriketiya.nl.html?checkin=2027-01-14&amp;checkout=2027-01-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Hiriketiya is een kleine hoefijzervormige baai vol palmbomen, met golven voor beginners en gevorderden en een relaxte surfsfeer.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Surfen</h3><span class="t">elke ochtend</span></div><p>Zelf het water in, of een surfles op het strand.</p></li>
+        <li><div class="top"><h3>Yoga</h3><time>07:00</time></div><p>Bij Salt House, of om 07:30 uur bij Dots Bay House, met uitzicht op het regenwoud.</p></li>
+        <li><div class="top"><h3>Blue Beach en de Hummanaya Blowhole</h3><span class="t">bij vloed</span></div><p>Witte zandbanken, en een van de grootste blaasgaten ter wereld.</p></li>
+        <li><div class="top"><h3>Dikwella beach</h3><span class="t">zonsondergang</span></div><p>En een avond eten bij Smoke &amp; Bitters.</p></li>
+      </ul>
+      <figure class="inset wide ph rv">
+        <div class="frame"><img src="fotos/hiriketiya-avond-1920.webp" srcset="fotos/hiriketiya-avond-960.webp 960w, fotos/hiriketiya-avond-1920.webp 1920w" sizes="(min-width:861px) 60vw, 100vw" width="1920" height="725" loading="lazy" decoding="async" alt="Paarse en oranje wolken boven een baai met palmbomen bij zonsondergang"></div>
+        <figcaption class="cap">De baai bij zonsondergang. <span>Foto: Sören Funk</span></figcaption>
+      </figure>
+      <figure class="inset ph rv">
+        <div class="frame"><img src="fotos/hiriketiya-bar-1920.webp" srcset="fotos/hiriketiya-bar-960.webp 960w, fotos/hiriketiya-bar-1920.webp 1920w" sizes="(min-width:861px) 60vw, 100vw" width="1920" height="1280" loading="lazy" decoding="async" alt="Houten strandbar met rieten dak en uitzicht op een groene landtong en de zee"></div>
+        <figcaption class="cap">Een strandbar met uitzicht op de golven. <span>Foto: Zoshua Colah</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="stop" id="ahangama" data-name="Ahangama">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">07</span><i></i><span>Zuidkust</span></p>
+    <h2>Ahangama</h2>
+    <p class="when"><span>ma 18 – za 23 januari</span><b>5 nachten</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/steltvissers-1920.webp" srcset="fotos/steltvissers-960.webp 960w, fotos/steltvissers-1920.webp 1920w" sizes="100vw" width="1920" height="1282" loading="lazy" decoding="async" style="object-position:50% 58%" alt="Vier vissers zitten op houten palen in de branding, met rotsen in zee"></div>
+    <figcaption class="wrap cap">Steltvissers op hun palen in de branding, aan de zuidkust. <span>Foto: Jakub Hałun</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Met de tuktuk langs de kust naar het westen.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">Balazo</p>
+        <p class="room">Aan het strand, in een kamer met balkon en uitzicht op zee. Met een eigen keukentje.</p>
+        <p class="meta"><span class="score">9,3</span><span>5 nachten · € 118</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/balazo.nl.html?checkin=2027-01-18&amp;checkout=2027-01-23&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Ahangama is het hippe surfdorp van de zuidkust, met strandcafés, yogastudio's in de jungle en de traditionele steltvissers op palen in zee. Hier blijven we het langst.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Surfen</h3></div><p>Bij Kabalana beach, of op de beginnersgolven van Weligama.</p></li>
+        <li><div class="top"><h3>Pilates en yoga</h3></div><p>Reformer-pilates bij Ulu House of Pilates. Yoga bij The Nuga House, bij Soul &amp; Surf, of op een drijvend platform op de rivier bij Yin Yang.</p></li>
+        <li><div class="top"><h3>Walvissen spotten</h3><span class="t">een ochtend</span></div><p>Met de boot vanuit Mirissa. Januari is een van de beste maanden voor blauwe vinvissen, de grootste dieren op aarde.</p></li>
+        <li><div class="top"><h3>Ontbijt en zonsondergang</h3></div><p>Ontbijten bij Marshmallow Café of Cactus, de dag afsluiten bij Lighthouse.</p></li>
+      </ul>
+      <figure class="inset ph rv">
+        <div class="frame"><img src="fotos/mirissa-1920.webp" srcset="fotos/mirissa-960.webp 960w, fotos/mirissa-1920.webp 1920w" sizes="(min-width:861px) 60vw, 100vw" width="1920" height="1520" loading="lazy" decoding="async" style="object-position:60% 55%" alt="Golven rollen een baai binnen onder een groene landtong met palmen"></div>
+        <figcaption class="cap">De kust bij Mirissa, waar de walvisboten vertrekken. <span>Foto: Thedani Karasnagoda</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="stop" id="galle" data-name="Galle Fort">
+  <header class="wrap stop-head rv">
+    <p class="kicker"><span class="nr">08</span><i></i><span>Zuidkust</span></p>
+    <h2>Galle Fort</h2>
+    <p class="when"><span>za 23 – zo 24 januari</span><b>1 nacht</b></p>
+  </header>
+  <figure class="ph">
+    <div class="frame"><img src="fotos/galle-1920.webp" srcset="fotos/galle-960.webp 960w, fotos/galle-1920.webp 1920w" sizes="100vw" width="1920" height="1280" loading="lazy" decoding="async" style="object-position:72% 62%" alt="Witte vuurtoren met palmbomen op een oude vestingmuur onder een strakblauwe lucht"></div>
+    <figcaption class="wrap cap">De vuurtoren op de muren van Galle Fort. <span>Foto: Samal Nadeeshan</span></figcaption>
+  </figure>
+  <div class="wrap stop-body">
+    <aside class="side rv">
+      <div class="arrive"><h3>Zo komen we er</h3><p>Het laatste stukje met de tuktuk, van Ahangama naar Galle.</p></div>
+      <div class="sleep">
+        <h3>Hier slapen we</h3>
+        <p class="hotel">No 05 Middle Street</p>
+        <p class="room">Superior kamer met kingsize bed, binnen de muren van het fort. Ontbijt inbegrepen.</p>
+        <p class="meta"><span class="score">9,5</span><span>1 nacht · € 135</span></p>
+        <a class="go" href="https://www.booking.com/hotel/lk/fortaleza-middle-street-galle.nl.html?checkin=2027-01-23&amp;checkout=2027-01-24&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener">Bekijk het hotel <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+    <div class="stop-main">
+      <p class="lead rv">Galle Fort is een oude Nederlandse vesting aan zee, met witte huizen, kerkjes, boetiekjes en een vuurtoren binnen dikke stadsmuren. Onze laatste avond.</p>
+      <ul class="plans rv">
+        <li><div class="top"><h3>Rondlopen door het fort</h3></div><p>Door Pedlar Street en Church Street, langs de vuurtoren en de Hollandse kerk.</p></li>
+        <li><div class="top"><h3>Sieradenworkshop</h3></div><p>Zelf een ring of hanger maken met Sri Lankaanse edelstenen.</p></li>
+        <li><div class="top"><h3>Zonsondergang op de muren</h3><time>18:15</time></div><p>Daarna een afscheidsdiner in het fort.</p></li>
+        <li><div class="top"><h3>Naar het vliegveld</h3><time>04:45</time></div><p>Zondagochtend in 2 uur naar het vliegveld, voor de vlucht van 10:15 uur.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- praktisch -->
+<section class="info" id="praktisch">
+  <div class="wrap">
+    <p class="kicker">Praktisch</p>
+    <h2 class="sec-h">Goed om te weten</h2>
+    <div class="info-grid">
+      <div class="block flights rv">
+        <h3>Vluchten</h3>
+        <p class="muted">Qatar Airways, met een overstap in Doha.</p>
+        <div class="flight"><span class="dir">Heen</span><span class="ft"><small>ma 4 jan</small>15:05</span><span class="ar" aria-hidden="true">→</span><span class="ft"><small>di 5 jan</small>08:45</span></div>
+        <div class="flight"><span class="dir">Terug</span><span class="ft"><small>zo 24 jan</small>10:15</span><span class="ar" aria-hidden="true">→</span><span class="ft"><small>zo 24 jan</small>20:20</span></div>
+      </div>
+      <div class="block costs rv">
+        <h3>Wat het kost</h3>
+        <table>
+          <tr><td>Vluchten<small>voor ons samen</small></td><td>± € 2.080</td></tr>
+          <tr><td>Hotels<small>8 hotels, 19 nachten</small></td><td>€ 854</td></tr>
+          <tr><td>Samen</td><td>± € 2.934</td></tr>
+          <tr class="sum"><td>Per persoon</td><td>± € 1.470</td></tr>
+        </table>
+        <p class="muted">Prijzen van 17 november 2026. Niet meegerekend: vervoer op het eiland, de safari, de walvissentocht, eten en entreegeld.</p>
+      </div>
+      <div class="block move rv">
+        <h3>Zo reizen we</h3>
+        <ul class="modes">
+          <li><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h40" stroke="#10262b" stroke-width="2" fill="none"/></svg><div><b>Chauffeur</b><span>Door het binnenland: van het vliegveld naar Sigiriya, Kandy en Adam's Peak, en van Ella naar Tissa.</span></div></li>
+          <li><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M0 6h40" stroke="#96580a" stroke-width="1.6" fill="none"/><path d="M1 6h39" stroke="#96580a" stroke-width="9" stroke-dasharray="1.6 5.4" fill="none"/></svg><div><b>Trein</b><span>Van Hatton naar Ella, vier uur door het heuvelland.</span></div></li>
+          <li><svg viewBox="0 0 40 12" aria-hidden="true"><path d="M1 6h39" stroke="#10262b" stroke-width="3" stroke-dasharray=".1 6.6" stroke-linecap="round" fill="none"/></svg><div><b>Eigen tuktuk</b><span>Vanaf Tissa rijden we zelf, langs de hele zuidkust tot Galle.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="beds rv">
+      <h3>Waar we slapen</h3>
+      <ol class="bedlist">
+        <li><a href="https://www.booking.com/hotel/lk/sigiri-enaya-cottage.nl.html?checkin=2027-01-05&amp;checkout=2027-01-08&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">01</span><span class="pl">Sigiriya</span><span class="ho">Sigiri Enaya Cottage</span><span class="ni">3 nachten</span><span class="pr">€ 112</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/anna-asia-villa-kandy.nl.html?checkin=2027-01-08&amp;checkout=2027-01-10&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">02</span><span class="pl">Kandy</span><span class="ho">Anna Asia Villa</span><span class="ni">2 nachten</span><span class="pr">€ 106</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/hugging-clouds.nl.html?checkin=2027-01-10&amp;checkout=2027-01-11&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">03</span><span class="pl">Adam's Peak</span><span class="ho">Hugging Clouds</span><span class="ni">1 nacht</span><span class="pr">€ 26</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/ella-wood-cabin.nl.html?checkin=2027-01-11&amp;checkout=2027-01-13&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">04</span><span class="pl">Ella</span><span class="ho">Ella Wood Cabin</span><span class="ni">2 nachten</span><span class="pr">€ 114</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/ariya-tissa.nl.html?checkin=2027-01-13&amp;checkout=2027-01-14&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">05</span><span class="pl">Tissamaharama</span><span class="ho">Ariya Tissa</span><span class="ni">1 nacht</span><span class="pr">€ 43</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/lagoon-house-hiriketiya.nl.html?checkin=2027-01-14&amp;checkout=2027-01-18&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">06</span><span class="pl">Hiriketiya</span><span class="ho">Breath House</span><span class="ni">4 nachten</span><span class="pr">€ 200</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/balazo.nl.html?checkin=2027-01-18&amp;checkout=2027-01-23&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">07</span><span class="pl">Ahangama</span><span class="ho">Balazo</span><span class="ni">5 nachten</span><span class="pr">€ 118</span></a></li>
+        <li><a href="https://www.booking.com/hotel/lk/fortaleza-middle-street-galle.nl.html?checkin=2027-01-23&amp;checkout=2027-01-24&amp;group_adults=2&amp;no_rooms=1&amp;group_children=0" target="_blank" rel="noopener"><span class="n">08</span><span class="pl">Galle Fort</span><span class="ho">No 05 Middle Street</span><span class="ni">1 nacht</span><span class="pr">€ 135</span></a></li>
+      </ol>
+      <p class="muted status">De vluchten en hotels zijn uitgezocht maar nog niet geboekt. Alle acht hotels zijn gratis te annuleren en betaal je pas ter plaatse.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="bye">Ayubowan.</p>
+    <p class="bye-sub">Zo begroet je elkaar op Sri Lanka. Het betekent: moge je lang leven.</p>
+    <div class="credits">
+      <h3>Foto's</h3>
+      <ul>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Sigiriya,_taken_from_Pidurangala_Rock.jpg" target="_blank" rel="noopener">Sigiriya vanaf Pidurangala</a>, C.J.Hatton, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Sigiriya_depuis_Pidurangala_(1).jpg" target="_blank" rel="noopener">Lion Rock in de nevel</a>, Ji-Elle, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Statue_of_the_Buddha_reclining_in_the_Dambulla_cave_temple,_Dambulla,_Sri_Lanka,_20260201_1419_8127.jpg" target="_blank" rel="noopener">Grottempel van Dambulla</a>, Jakub Hałun, CC BY 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:SL_Kandy_asv2020-01_img34_Sacred_Tooth_Temple.jpg" target="_blank" rel="noopener">Tempel van de tand</a>, A.Savin, Free Art License</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Sunrise_from_the_top_of_Sri_Pada_(Adam%27s_Peak)_Sri_Lanka.jpg" target="_blank" rel="noopener">Zonsopkomst op Adam's Peak</a>, Eli Solidum, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:SL_Demodara_near_Ella_asv2020-01_img02.jpg" target="_blank" rel="noopener">Trein bij Demodara</a> en <a href="https://commons.wikimedia.org/wiki/File:SL_Demodara_near_Ella_asv2020-01_img03.jpg" target="_blank" rel="noopener">Nine Arch Bridge</a>, A.Savin, Free Art License</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Tea_plantation_Haputale.jpg" target="_blank" rel="noopener">Theeplantage bij Haputale</a>, Adbar, CC BY-SA 3.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:SL_Ella_asv2020-01_img33_Kithalella_halt.jpg" target="_blank" rel="noopener">Station Kithalella</a>, A.Savin, Free Art License</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Srilankan_leopard_in_Yala_National_Park.jpg" target="_blank" rel="noopener">Luipaard in Yala</a>, AdrianRanasinghe, CC BY-SA 4.0</li>
+        <li><a href="https://unsplash.com/photos/Rk1aOrEjxOY" target="_blank" rel="noopener">Surfer in Hiriketiya</a> en <a href="https://unsplash.com/photos/sxIxCH-X21Y" target="_blank" rel="noopener">strandbar</a>, Zoshua Colah, Unsplash</li>
+        <li><a href="https://unsplash.com/photos/67aWaECYb_A" target="_blank" rel="noopener">Hiriketiya bij zonsondergang</a>, Sören Funk, Unsplash</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Fishermen_practicing_traditional_stilt_fishing_near_Galle,_southern_Sri_Lanka,_20260207_1420_9467.jpg" target="_blank" rel="noopener">Steltvissers</a>, Jakub Hałun, CC BY 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Mirissa_sea_1.jpg" target="_blank" rel="noopener">Kust bij Mirissa</a>, Thedani Karasnagoda, CC BY-SA 4.0</li>
+        <li><a href="https://commons.wikimedia.org/wiki/File:Lighthouse_Galle,_Sri_Lanka.jpg" target="_blank" rel="noopener">Vuurtoren van Galle</a>, Samal Nadeeshan, CC BY-SA 4.0</li>
+      </ul>
+    </div>
+    <p class="small">De foto's zijn verkleind en bijgesneden. De kaart is een schets, niet op schaal voor navigatie. Bijgewerkt op 18 november 2026.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement; root.classList.add('js');
+  var nav=d.querySelector('.nav'), bar=d.querySelector('.bar'), now=d.querySelector('.now'), hero=d.querySelector('.hero');
+  var stops=[].slice.call(d.querySelectorAll('.stop'));
+  var rail=[].slice.call(d.querySelectorAll('.rail a'));
+  var marks=[].slice.call(d.querySelectorAll('[data-stop]'));
+  var info=d.getElementById('praktisch'), band=d.querySelector('.ride'), train=d.querySelector('.train');
+  var calm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var current=-1, busy=false;
+
+  function setActive(n){
+    if(n===current) return; current=n;
+    for(var i=0;i<rail.length;i++){ rail[i].classList.toggle('on',i+1===n); rail[i].classList.toggle('done',i+1<n); }
+    for(var j=0;j<marks.length;j++){ marks[j].classList.toggle('on',+marks[j].getAttribute('data-stop')===n); }
+    if(n>=1&&n<=stops.length){ now.textContent=(n<10?'0':'')+n+' · '+stops[n-1].getAttribute('data-name'); }
+    else if(n>stops.length){ now.textContent='Praktisch'; }
+    else { now.textContent='De reis'; }
+  }
+  function update(){
+    busy=false;
+    var y=window.pageYOffset||root.scrollTop||0, vh=window.innerHeight, max=root.scrollHeight-vh;
+    bar.style.transform='scaleX('+(max>0?Math.min(1,Math.max(0,y/max)):0)+')';
+    nav.classList.toggle('on', y>hero.offsetHeight*0.62);
+    var line=vh*0.42, n=0;
+    for(var i=0;i<stops.length;i++){ if(stops[i].getBoundingClientRect().top<=line) n=i+1; }
+    if(info&&info.getBoundingClientRect().top<=line) n=stops.length+1;
+    setActive(n);
+    if(band&&train&&!calm){
+      var r=band.getBoundingClientRect(), p=(vh-r.top)/(vh+r.height);
+      train.style.left=(Math.min(1,Math.max(0,p))*100)+'%';
+    }
+  }
+  function onScroll(){ if(!busy){ busy=true; (window.requestAnimationFrame||setTimeout)(update); } }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  update();
+
+  var items=[].slice.call(d.querySelectorAll('.rv,.ph'));
+  if('IntersectionObserver' in window && !calm){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+    items.forEach(function(el){ io.observe(el); });
+  } else { items.forEach(function(el){ el.classList.add('in'); }); }
+
+  var cd=d.getElementById('cd');
+  if(cd){
+    var t=new Date(); t.setHours(0,0,0,0);
+    var dep=new Date(2027,0,4), back=new Date(2027,0,24);
+    var days=Math.round((dep-t)/864e5), html='';
+    if(days>1) html='<b>'+days+'</b><span>dagen<br>tot vertrek</span>';
+    else if(days===1) html='<b>1</b><span>nachtje slapen<br>tot vertrek</span>';
+    else if(days===0) html='<b>Nu</b><span>vandaag<br>vertrekken we</span>';
+    else if(t<=back) html='<b>'+(1-days)+'</b><span>dag van de reis,<br>van de 21</span>';
+    if(html) cd.innerHTML=html;
+  }
+})();
+</script>
+</body>
+</html>
